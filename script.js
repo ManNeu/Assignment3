@@ -31,38 +31,42 @@ var generatedPassword = '';
 
 
 
-if (hasLower == true)
-{
-    var lower = getRandomLower();
-    console.log (lower);
-   
+if (hasLower == true){
+  for (i = 0; i <=length; i++){
+  var lower = getRandomLower();
+  //console.log (lower);
+  
 generatedPassword += lower;
+  }
+  console.log(generatedPassword);
 }
 
 if (hasUpper == true){
-    var upper = getRandomUpper();
-    generatedPassword += upper;
+  for (i = 0; i <=length; i++){
+  var upper = getRandomUpper();
+  generatedPassword += upper;
+  }
 
-   
+ 
 }
 
 if (hasNumber == true){
-    var Number = getRandomNumber();
-    generatedPassword += Number;
-    
+  for (i = 0; i <=length; i++){
+  var Number = getRandomNumber();
+  generatedPassword += Number;
+  }
+  
 }
 
 if (hasSymbol == true){
-    var Symbol =  getRandomSymbol();
-    generatedPassword += Symbol;
-   
+  for (i = 0; i <=length; i++){
+  var Symbol =  getRandomSymbol();
+  generatedPassword += Symbol;
+  }
+ console.log(generatedPassword);
 }
 
-var generatePassword;
-
-passwordEl.innerText =  generatePassword (generatedPassword);
-
-console.log(generatePassword);
+passwordEl.innerText = (generatedPassword);
 
 });
 }
